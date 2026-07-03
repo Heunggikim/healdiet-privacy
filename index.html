@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HealDiet — Privacy Policy / 개인정보 처리방침</title>
+<style>
+  :root{
+    --bg:#f7f8f7; --card:#ffffff; --ink:#1c2420; --muted:#5b6b63;
+    --line:#e2e8e4; --accent:#0f7a5a; --accent-soft:#e6f2ec;
+    --measure:44rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#10140f; --card:#171d18; --ink:#e8efe9; --muted:#9db0a5;
+      --line:#28312b; --accent:#4fd1a5; --accent-soft:#16241d; }
+  }
+  :root[data-theme="dark"]{ --bg:#10140f; --card:#171d18; --ink:#e8efe9; --muted:#9db0a5; --line:#28312b; --accent:#4fd1a5; --accent-soft:#16241d; }
+  :root[data-theme="light"]{ --bg:#f7f8f7; --card:#ffffff; --ink:#1c2420; --muted:#5b6b63; --line:#e2e8e4; --accent:#0f7a5a; --accent-soft:#e6f2ec; }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:var(--measure); margin:0 auto; padding:28px 20px 80px; }
+  header.top{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    padding-bottom:18px; border-bottom:1px solid var(--line); margin-bottom:26px; }
+  .brand{ display:flex; align-items:center; gap:11px; font-weight:700; font-size:1.15rem; letter-spacing:-.01em; }
+  .logo{ width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,var(--accent),#8fd6bd);
+    display:grid; place-items:center; color:#fff; font-weight:800; font-size:1rem; }
+  .toggle{ display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:var(--card); }
+  .toggle button{ appearance:none; border:0; background:transparent; color:var(--muted); font:inherit; font-size:.82rem;
+    font-weight:600; padding:7px 15px; cursor:pointer; }
+  .toggle button[aria-pressed="true"]{ background:var(--accent); color:#fff; }
+  h1{ font-size:1.7rem; line-height:1.25; letter-spacing:-.02em; margin:.2em 0 .1em; text-wrap:balance; }
+  .meta{ color:var(--muted); font-size:.9rem; margin:0 0 22px; }
+  h2{ font-size:1.12rem; letter-spacing:-.01em; margin:2em 0 .5em; padding-top:.4em; }
+  h2 .n{ color:var(--accent); font-variant-numeric:tabular-nums; margin-right:.4em; }
+  p,li{ font-size:1rem; }
+  a{ color:var(--accent); }
+  .lead{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; margin:0 0 8px; }
+  .callout{ background:var(--accent-soft); border:1px solid var(--line); border-left:4px solid var(--accent);
+    border-radius:12px; padding:14px 16px; margin:18px 0; font-size:.96rem; }
+  table{ width:100%; border-collapse:collapse; margin:10px 0; font-size:.94rem; display:block; overflow-x:auto; }
+  th,td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ color:var(--muted); font-weight:600; font-size:.82rem; text-transform:uppercase; letter-spacing:.03em; }
+  code{ background:var(--accent-soft); padding:1px 6px; border-radius:6px; font-size:.9em; }
+  ul{ padding-left:1.2em; } li{ margin:.25em 0; }
+  footer{ margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:.86rem; }
+  .lang{ display:none; } .lang.active{ display:block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span class="logo">H</span> HealDiet</div>
+    <div class="toggle" role="group" aria-label="Language">
+      <button id="btn-en" aria-pressed="true" onclick="setLang('en')">English</button>
+      <button id="btn-ko" aria-pressed="false" onclick="setLang('ko')">한국어</button>
+    </div>
+  </header>
+
+  <!-- ================= ENGLISH ================= -->
+  <section class="lang active" id="lang-en">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: July 3, 2026 · Last updated: July 3, 2026</p>
+
+    <div class="lead">
+      <p style="margin:0">HealDiet ("the App", "we", "us") helps people with chronic conditions manage their diet.
+      This policy explains what personal information we collect, why, who we share it with, and the choices and rights you have.
+      HealDiet is operated by <strong>Heung Gi Kim</strong>, an individual developer, who is the data controller.
+      Questions? Contact <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a>.</p>
+    </div>
+
+    <div class="callout">
+      <strong>Not medical advice.</strong> HealDiet provides general nutrition and wellness information and is not a
+      medical device or a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified
+      healthcare provider before making decisions about your health, diet, or medication.
+    </div>
+
+    <h2><span class="n">1.</span>Information we collect</h2>
+    <p>We collect only what the App needs to work. Categories:</p>
+    <table>
+      <tr><th>Category</th><th>Examples</th><th>Source</th></tr>
+      <tr><td>Account</td><td>Email address, authentication identifier (Sign in with Apple / Google)</td><td>You / Apple / Google</td></tr>
+      <tr><td>Health &amp; profile (sensitive)</td><td>Chronic conditions (e.g., dyslipidemia, fatty liver, hypertension, prediabetes, diabetes, kidney disease, heart failure), goals, allergies, dislikes, height, weight, and lab values you enter (LDL, HDL, triglycerides, total cholesterol, blood pressure, glucose, HbA1c, ALT, AST, eGFR, creatinine, urine ACR, potassium)</td><td>You</td></tr>
+      <tr><td>Diet activity</td><td>Meals, foods and portions logged, water intake, meal plans, recommendations, adherence</td><td>You</td></tr>
+      <tr><td>Photos</td><td>Food and refrigerator photos you take or select for analysis</td><td>You</td></tr>
+      <tr><td>Apple Health (HealthKit)</td><td>Body weight you choose to import; meals you choose to write back</td><td>Apple Health (with your permission)</td></tr>
+      <tr><td>Device &amp; technical</td><td>App version, device type, language, time zone, basic error logs</td><td>Automatically</td></tr>
+    </table>
+    <p>We do <strong>not</strong> intentionally collect precise location, contacts, or advertising identifiers.</p>
+
+    <h2><span class="n">2.</span>How we use your information</h2>
+    <ul>
+      <li>Provide core features: log foods, estimate nutrition, show condition-aware recommendations, track biomarkers and progress.</li>
+      <li>Analyze food/fridge photos you submit to identify foods and estimate nutrition.</li>
+      <li>Personalize targets and meal suggestions to your conditions and goals.</li>
+      <li>Maintain security, prevent abuse, fix bugs, and improve the App.</li>
+      <li>Respond to your requests and provide support.</li>
+    </ul>
+    <p>We do <strong>not</strong> sell your personal information, and we do not use your health data for advertising.</p>
+
+    <h2><span class="n">3.</span>Legal bases (EEA/UK users)</h2>
+    <ul>
+      <li><strong>Consent</strong> — for health data, photos, and importing Apple Health data. You may withdraw consent at any time.</li>
+      <li><strong>Contract</strong> — to provide the App you request.</li>
+      <li><strong>Legitimate interests</strong> — security, preventing abuse, and improving the App.</li>
+      <li><strong>Legal obligation</strong> — where we must retain or disclose data by law.</li>
+    </ul>
+
+    <h2><span class="n">4.</span>Service providers we share data with</h2>
+    <p>We use trusted providers ("sub-processors") to run the App. They may process your data only to provide services to us:</p>
+    <table>
+      <tr><th>Provider</th><th>Purpose</th><th>Data involved</th></tr>
+      <tr><td>Supabase, Inc.</td><td>Authentication, database, and storage (backend hosting, USA)</td><td>Account, health/profile, diet activity, photos</td></tr>
+      <tr><td>OpenAI, L.L.C.</td><td>AI analysis of food/fridge photos, recipes, and coaching text</td><td>Photos and related text you submit</td></tr>
+      <tr><td>Apple</td><td>Sign in with Apple, HealthKit, App Store / TestFlight</td><td>Auth identifier, weight (with permission)</td></tr>
+      <tr><td>Google LLC</td><td>Sign in with Google (optional)</td><td>Auth identifier, email</td></tr>
+      <tr><td>Pexels; USDA FoodData Central; Open Food Facts</td><td>Stock food images and public food/nutrition databases</td><td>Search terms only (no account or health data)</td></tr>
+    </table>
+    <p>Photos and text sent to OpenAI's API are used solely to return results to you and, per OpenAI's API terms, are not used to train their models. We may also disclose information if required by law or to protect rights and safety.</p>
+
+    <h2><span class="n">5.</span>Apple Health (HealthKit)</h2>
+    <ul>
+      <li>We access Apple Health data only after you grant permission, and only the types needed (e.g., body weight).</li>
+      <li>HealthKit data is <strong>never</strong> used for advertising or marketing, is <strong>not</strong> sold, and is <strong>not</strong> shared with third parties for their own purposes.</li>
+      <li>You can revoke access anytime in the iOS Settings &gt; Privacy &amp; Security &gt; Health.</li>
+    </ul>
+
+    <h2><span class="n">6.</span>Data retention</h2>
+    <p>We keep your data while your account is active. You can clear your logged data in the App ("reset my data"), or ask us to
+    delete your account and associated data by emailing <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a>. We will delete or
+    anonymize data within a reasonable period unless we must keep it to comply with the law.</p>
+
+    <h2><span class="n">7.</span>International transfers</h2>
+    <p>We are based in the United States, and our providers (including Supabase and OpenAI) process data in the United States.
+    If you use the App from outside the U.S., your information will be transferred to and processed in the U.S. and other countries
+    where our providers operate.</p>
+
+    <h2><span class="n">8.</span>Your rights and choices</h2>
+    <p>Depending on where you live (e.g., EEA/UK under GDPR, or California under CCPA/CPRA), you may have the right to:</p>
+    <ul>
+      <li>Access, correct, or delete your personal information;</li>
+      <li>Export a copy of your data (portability);</li>
+      <li>Withdraw consent or object to certain processing;</li>
+      <li>Not receive discrimination for exercising your rights.</li>
+    </ul>
+    <p>We do not sell or "share" personal information as defined by the CCPA/CPRA. To exercise any right, email
+    <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a>. You may also manage or delete much of your data directly in the App.</p>
+
+    <h2><span class="n">9.</span>Security</h2>
+    <p>We protect your data using encryption in transit (HTTPS/TLS), access controls, and row-level security on our database.
+    No method of transmission or storage is 100% secure, but we work to protect your information and limit access to it.</p>
+
+    <h2><span class="n">10.</span>Children's privacy</h2>
+    <p>HealDiet is intended for adults and is not directed to children under 13 (or the minimum age required in your country).
+    We do not knowingly collect data from children. If you believe a child has provided us data, contact us and we will delete it.</p>
+
+    <h2><span class="n">11.</span>Changes to this policy</h2>
+    <p>We may update this policy from time to time. We will change the "Last updated" date above and, for material changes,
+    provide notice in the App or by other reasonable means. Continued use after changes means you accept the updated policy.</p>
+
+    <h2><span class="n">12.</span>Contact</h2>
+    <p>Heung Gi Kim (individual developer)<br>Email: <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a></p>
+  </section>
+
+  <!-- ================= 한국어 ================= -->
+  <section class="lang" id="lang-ko">
+    <h1>개인정보 처리방침</h1>
+    <p class="meta">시행일: 2026년 7월 3일 · 최종 업데이트: 2026년 7월 3일</p>
+
+    <div class="lead">
+      <p style="margin:0">HealDiet(이하 "앱", "당사")는 만성질환이 있는 분들의 식단 관리를 돕는 앱입니다.
+      본 방침은 당사가 수집하는 개인정보의 종류와 목적, 공유 대상, 그리고 이용자의 선택권과 권리를 설명합니다.
+      HealDiet는 개인 개발자 <strong>Heung Gi Kim(김흥기)</strong>가 운영하며, 개인정보 처리자(controller)입니다.
+      문의: <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a></p>
+    </div>
+
+    <div class="callout">
+      <strong>의학적 조언이 아닙니다.</strong> HealDiet는 일반적인 영양·건강 정보를 제공할 뿐, 의료기기가 아니며 전문적인
+      의학적 진단·치료·조언을 대체하지 않습니다. 건강·식단·약물에 관한 결정을 내리기 전에 반드시 자격을 갖춘 의료 전문가와 상담하세요.
+    </div>
+
+    <h2><span class="n">1.</span>수집하는 정보</h2>
+    <p>당사는 앱 작동에 필요한 정보만 수집합니다.</p>
+    <table>
+      <tr><th>구분</th><th>예시</th><th>출처</th></tr>
+      <tr><td>계정</td><td>이메일 주소, 인증 식별자(Apple/Google 로그인)</td><td>이용자 / Apple / Google</td></tr>
+      <tr><td>건강·프로필(민감정보)</td><td>만성질환(이상지질혈증, 지방간, 고혈압, 전당뇨, 당뇨, 신장질환, 심부전 등), 목표, 알레르기, 기피 음식, 키, 체중, 직접 입력한 검사수치(LDL, HDL, 중성지방, 총콜레스테롤, 혈압, 공복혈당, HbA1c, ALT, AST, eGFR, 크레아티닌, 요알부민 ACR, 칼륨)</td><td>이용자</td></tr>
+      <tr><td>식단 활동</td><td>기록한 식사·음식·양, 수분 섭취, 식단 계획, 추천, 준수도</td><td>이용자</td></tr>
+      <tr><td>사진</td><td>분석을 위해 촬영·선택한 음식/냉장고 사진</td><td>이용자</td></tr>
+      <tr><td>Apple 건강(HealthKit)</td><td>가져오기를 선택한 체중, 기록을 선택한 식사</td><td>Apple 건강(이용자 허용 시)</td></tr>
+      <tr><td>기기·기술 정보</td><td>앱 버전, 기기 종류, 언어, 시간대, 기본 오류 로그</td><td>자동 수집</td></tr>
+    </table>
+    <p>당사는 정밀 위치, 연락처, 광고 식별자를 <strong>의도적으로 수집하지 않습니다.</strong></p>
+
+    <h2><span class="n">2.</span>정보 이용 목적</h2>
+    <ul>
+      <li>핵심 기능 제공: 음식 기록, 영양 추정, 질환 맞춤 추천, 검사수치·변화 추적</li>
+      <li>제출한 음식/냉장고 사진을 분석해 음식 식별 및 영양 추정</li>
+      <li>질환·목표에 맞춘 목표치와 식단 제안 개인화</li>
+      <li>보안 유지, 오·남용 방지, 오류 수정 및 앱 개선</li>
+      <li>문의 응대 및 고객 지원</li>
+    </ul>
+    <p>당사는 개인정보를 <strong>판매하지 않으며</strong>, 건강데이터를 광고에 이용하지 않습니다.</p>
+
+    <h2><span class="n">3.</span>처리의 법적 근거(EEA/영국 이용자)</h2>
+    <ul>
+      <li><strong>동의</strong> — 건강데이터, 사진, Apple 건강 가져오기. 동의는 언제든 철회할 수 있습니다.</li>
+      <li><strong>계약 이행</strong> — 이용자가 요청한 앱 서비스 제공</li>
+      <li><strong>정당한 이익</strong> — 보안, 오·남용 방지, 앱 개선</li>
+      <li><strong>법적 의무</strong> — 법령에 따라 보관·제공이 필요한 경우</li>
+    </ul>
+
+    <h2><span class="n">4.</span>정보를 공유하는 서비스 제공자</h2>
+    <p>앱 운영을 위해 신뢰할 수 있는 제공자("수탁·처리자")를 이용하며, 이들은 당사에 서비스를 제공하는 목적으로만 정보를 처리합니다.</p>
+    <table>
+      <tr><th>제공자</th><th>목적</th><th>관련 데이터</th></tr>
+      <tr><td>Supabase, Inc.</td><td>인증·데이터베이스·저장(백엔드 호스팅, 미국)</td><td>계정, 건강/프로필, 식단 활동, 사진</td></tr>
+      <tr><td>OpenAI, L.L.C.</td><td>음식/냉장고 사진 AI 분석, 레시피, 코칭 텍스트</td><td>제출한 사진 및 관련 텍스트</td></tr>
+      <tr><td>Apple</td><td>Apple 로그인, HealthKit, App Store/TestFlight</td><td>인증 식별자, 체중(허용 시)</td></tr>
+      <tr><td>Google LLC</td><td>Google 로그인(선택)</td><td>인증 식별자, 이메일</td></tr>
+      <tr><td>Pexels, USDA FoodData Central, Open Food Facts</td><td>음식 이미지 및 공개 음식·영양 DB</td><td>검색어만(계정·건강데이터 없음)</td></tr>
+    </table>
+    <p>OpenAI API로 전송된 사진·텍스트는 이용자에게 결과를 제공하는 목적으로만 사용되며, OpenAI API 약관에 따라 모델 학습에 사용되지 않습니다. 또한 법령상 요구되거나 권리·안전 보호를 위해 필요한 경우 정보를 제공할 수 있습니다.</p>
+
+    <h2><span class="n">5.</span>Apple 건강(HealthKit)</h2>
+    <ul>
+      <li>이용자가 허용한 경우에만, 필요한 항목(예: 체중)에 한해 Apple 건강 데이터에 접근합니다.</li>
+      <li>HealthKit 데이터는 <strong>광고·마케팅에 절대 사용하지 않고</strong>, <strong>판매하지 않으며</strong>, 제3자의 목적을 위해 <strong>공유하지 않습니다.</strong></li>
+      <li>iOS 설정 &gt; 개인정보 보호 및 보안 &gt; 건강 에서 언제든 접근을 해제할 수 있습니다.</li>
+    </ul>
+
+    <h2><span class="n">6.</span>보관 기간</h2>
+    <p>계정이 활성 상태인 동안 데이터를 보관합니다. 앱 내 "내 데이터 초기화"로 기록을 삭제하거나,
+    <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a>로 계정 및 관련 데이터 삭제를 요청할 수 있습니다.
+    법령상 보관 의무가 없는 한 합리적 기간 내에 삭제하거나 익명화합니다.</p>
+
+    <h2><span class="n">7.</span>국외 이전</h2>
+    <p>당사는 미국에 소재하며, 제공자(Supabase, OpenAI 등)는 미국에서 데이터를 처리합니다.
+    미국 외 지역에서 앱을 이용하는 경우 정보가 미국 및 제공자가 운영하는 국가로 이전·처리됩니다.</p>
+
+    <h2><span class="n">8.</span>이용자의 권리와 선택</h2>
+    <p>거주 지역(예: GDPR 적용 EEA/영국, CCPA/CPRA 적용 캘리포니아, 한국 개인정보 보호법 등)에 따라 다음 권리를 가질 수 있습니다.</p>
+    <ul>
+      <li>개인정보 열람·정정·삭제</li>
+      <li>데이터 사본 내려받기(이동권)</li>
+      <li>동의 철회 또는 특정 처리에 대한 반대</li>
+      <li>권리 행사를 이유로 한 불이익 금지</li>
+    </ul>
+    <p>당사는 CCPA/CPRA가 정의하는 개인정보의 "판매" 또는 "공유"를 하지 않습니다. 권리 행사는
+    <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a>로 요청하시면 되며, 상당 부분은 앱 내에서 직접 관리·삭제할 수 있습니다.</p>
+
+    <h2><span class="n">9.</span>보안</h2>
+    <p>전송 구간 암호화(HTTPS/TLS), 접근 통제, 데이터베이스 행 수준 보안(RLS) 등으로 정보를 보호합니다.
+    다만 어떤 전송·저장 방식도 100% 안전하지는 않으며, 당사는 정보 보호와 접근 최소화를 위해 노력합니다.</p>
+
+    <h2><span class="n">10.</span>아동의 개인정보</h2>
+    <p>HealDiet는 성인을 대상으로 하며, 만 13세 미만(또는 해당 국가의 최소 연령) 아동을 대상으로 하지 않습니다.
+    당사는 아동의 정보를 고의로 수집하지 않습니다. 아동이 정보를 제공했다고 판단되면 연락 주시면 삭제하겠습니다.</p>
+
+    <h2><span class="n">11.</span>방침의 변경</h2>
+    <p>본 방침은 수시로 업데이트될 수 있습니다. 변경 시 상단의 "최종 업데이트" 날짜를 수정하며, 중요한 변경은 앱 내 공지 등
+    합리적인 방법으로 알립니다. 변경 후 계속 이용하면 변경된 방침에 동의한 것으로 간주됩니다.</p>
+
+    <h2><span class="n">12.</span>연락처</h2>
+    <p>Heung Gi Kim(김흥기, 개인 개발자)<br>이메일: <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a></p>
+  </section>
+
+  <footer>
+    © 2026 HealDiet · Heung Gi Kim. This document is provided in English and Korean; if there is any conflict, the English version governs for users outside Korea and the Korean version for users in Korea.
+  </footer>
+</div>
+
+<script>
+  function setLang(l){
+    document.getElementById('lang-en').classList.toggle('active', l==='en');
+    document.getElementById('lang-ko').classList.toggle('active', l==='ko');
+    document.getElementById('btn-en').setAttribute('aria-pressed', l==='en');
+    document.getElementById('btn-ko').setAttribute('aria-pressed', l==='ko');
+    document.documentElement.lang = l;
+    try{ localStorage.setItem('healdiet-lang', l); }catch(e){}
+  }
+  (function(){
+    var saved; try{ saved = localStorage.getItem('healdiet-lang'); }catch(e){}
+    var nav = (navigator.language||'en').toLowerCase().indexOf('ko')===0 ? 'ko' : 'en';
+    setLang(saved || nav);
+  })();
+</script>
+</body>
+</html>
