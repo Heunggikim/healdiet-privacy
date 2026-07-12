@@ -62,7 +62,7 @@
   <!-- ================= ENGLISH ================= -->
   <section class="lang active" id="lang-en">
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: July 3, 2026 · Last updated: July 3, 2026</p>
+    <p class="meta">Effective date: July 3, 2026 · Last updated: July 12, 2026</p>
 
     <div class="lead">
       <p style="margin:0">HealDiet ("the App", "we", "us") helps people with chronic conditions manage their diet.
@@ -148,6 +148,14 @@
     <p>We do not sell or "share" personal information as defined by the CCPA/CPRA. To exercise any right, email
     <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a>. You may also manage or delete much of your data directly in the App.</p>
 
+    <h2 id="delete" class="del-anchor">Account &amp; data deletion</h2>
+    <p>You can permanently delete your account and all associated data at any time:</p>
+    <ul>
+      <li><strong>In the app:</strong> open <strong>Settings → Delete account</strong> and confirm. This immediately and permanently deletes your account and all data linked to it — your profile, health interests, weight / blood pressure / blood glucose and other biomarker records, food and meal logs, photos, medication reminders, and app preferences.</li>
+      <li><strong>By email:</strong> if you can't access the app, email <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a> from your account's email address and we will delete your account and data within 30 days.</li>
+    </ul>
+    <p>Deletion is permanent and cannot be undone; deleted data cannot be recovered. We may retain limited records only where required by law (for example, tax or fraud-prevention) and remove everything else. Anonymized or aggregated data that can no longer identify you may be kept.</p>
+
     <h2><span class="n">9.</span>Security</h2>
     <p>We protect your data using encryption in transit (HTTPS/TLS), access controls, and row-level security on our database.
     No method of transmission or storage is 100% secure, but we work to protect your information and limit access to it.</p>
@@ -167,7 +175,7 @@
   <!-- ================= 한국어 ================= -->
   <section class="lang" id="lang-ko">
     <h1>개인정보 처리방침</h1>
-    <p class="meta">시행일: 2026년 7월 3일 · 최종 업데이트: 2026년 7월 3일</p>
+    <p class="meta">시행일: 2026년 7월 3일 · 최종 업데이트: 2026년 7월 12일</p>
 
     <div class="lead">
       <p style="margin:0">HealDiet(이하 "앱", "당사")는 만성질환이 있는 분들의 식단 관리를 돕는 앱입니다.
@@ -251,6 +259,14 @@
     <p>당사는 CCPA/CPRA가 정의하는 개인정보의 "판매" 또는 "공유"를 하지 않습니다. 권리 행사는
     <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a>로 요청하시면 되며, 상당 부분은 앱 내에서 직접 관리·삭제할 수 있습니다.</p>
 
+    <h2 class="del-anchor">계정 및 데이터 삭제</h2>
+    <p>언제든지 계정과 연결된 모든 데이터를 영구적으로 삭제할 수 있습니다.</p>
+    <ul>
+      <li><strong>앱에서:</strong> <strong>설정 → 계정 삭제</strong>를 열고 확인하세요. 계정과 연결된 모든 데이터(프로필, 건강관심사, 체중·혈압·혈당 등 검사수치 기록, 음식·식사 기록, 사진, 복약 리마인더, 앱 설정)가 즉시 영구 삭제됩니다.</li>
+      <li><strong>이메일로:</strong> 앱에 접근할 수 없는 경우, 계정 이메일 주소로 <a href="mailto:khgsyk@gmail.com">khgsyk@gmail.com</a>에 요청하시면 30일 이내에 계정과 데이터를 삭제해 드립니다.</li>
+    </ul>
+    <p>삭제는 영구적이며 되돌릴 수 없고, 삭제된 데이터는 복구할 수 없습니다. 법령상 보관이 요구되는 일부 기록(예: 세무·부정 방지)만 예외적으로 보관하며 그 외에는 모두 삭제합니다. 개인을 식별할 수 없는 익명·집계 데이터는 보관될 수 있습니다.</p>
+
     <h2><span class="n">9.</span>보안</h2>
     <p>전송 구간 암호화(HTTPS/TLS), 접근 통제, 데이터베이스 행 수준 보안(RLS) 등으로 정보를 보호합니다.
     다만 어떤 전송·저장 방식도 100% 안전하지는 않으며, 당사는 정보 보호와 접근 최소화를 위해 노력합니다.</p>
@@ -280,12 +296,20 @@
     document.getElementById('btn-ko').setAttribute('aria-pressed', l==='ko');
     document.documentElement.lang = l;
     try{ localStorage.setItem('healdiet-lang', l); }catch(e){}
+    if (location.hash === '#delete') goDelete();
+  }
+  // #delete 앵커 → 현재 보이는 언어의 "계정 및 데이터 삭제" 섹션으로 스크롤(언어와 무관하게 동작).
+  function goDelete(){
+    var el = document.querySelector('.lang.active .del-anchor');
+    if (el) el.scrollIntoView({ block: 'start' });
   }
   (function(){
     var saved; try{ saved = localStorage.getItem('healdiet-lang'); }catch(e){}
     var nav = (navigator.language||'en').toLowerCase().indexOf('ko')===0 ? 'ko' : 'en';
     setLang(saved || nav);
+    if (location.hash === '#delete') goDelete();
   })();
+  window.addEventListener('hashchange', function(){ if (location.hash === '#delete') goDelete(); });
 </script>
 </body>
 </html>
